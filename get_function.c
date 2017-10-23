@@ -3,6 +3,12 @@
 #include <unistd.h>
 #include "holberton.h"
 
+/**
+  * get_func - contains a struct to scan chars to
+  * choose the right function to pass back
+  * @list: the va_list we want to increment through
+  * Return: the pointer to the appropriate function or NULL if nothing matches
+  */
 int (*get_func(char ch))(va_list)
 {
 	ops_f print_op[] = {
@@ -17,7 +23,7 @@ int (*get_func(char ch))(va_list)
 	index = 0;
 	while (print_op[index].operation != '\0')
 	{
-		if(ch == print_op[index].operation)
+		if (ch == print_op[index].operation)
 			return (print_op[index].func);
 		index++;
 	}

@@ -3,14 +3,11 @@
 #include <unistd.h>
 #include "holberton.h"
 
-/*function definitions*/
-
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: 1 because 1 char was printed
  */
 int _putchar(char c)
 {
@@ -33,9 +30,9 @@ int print_char(va_list list)
 }
 
 /**
-  *
-  *
-  *
+  * print_string - prints a string 1 char at a time to stdout
+  * @list: the va_list we want to increment through
+  * Return: the number of times we printed a char
   */
 int print_string(va_list list)
 {
@@ -55,8 +52,11 @@ int print_string(va_list list)
 }
 
 /**
-  *
-  *
+  * print_non - prints chars after a % if they
+  * don't match anything in the struct
+  * @ch1: the first char passed (always %)
+  * @ch2: the char after the %
+  * Return: 1 if ch2 is a % and 2 is ch2 is anything else
   */
 int print_non(char ch1, char ch2)
 {
@@ -73,8 +73,9 @@ int print_non(char ch1, char ch2)
 	}
 }
 /**
- *
- *
+ * print_num - takes a number and passes it to another function to write
+ * @list: va_list we want to increment through
+ * Return: the amount of numbers and signs we print
  */
 int print_num(va_list list)
 {
@@ -87,14 +88,14 @@ int print_num(va_list list)
 	if (num < 0)
 	{
 		n = num * (-1);
-		write(1, & negative_sign, 1);
+		write(1, &negative_sign, 1);
 		count++;
 	}
 	else
 	{
 		n = num;
 	}
-	while ((n/x) != 0)
+	while ((n / x) != 0)
 	{
 		count++;
 		x *= 10;

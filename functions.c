@@ -86,6 +86,7 @@ int print_num(va_list list)
 	{
 		n = num * (-1);
 		write(1, & negative_sign, 1);
+		count++;
 	}
 	else
 	{

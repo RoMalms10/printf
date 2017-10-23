@@ -70,3 +70,32 @@ int print_non(char ch1, char ch2)
 		return (2);
 	}
 }
+/**
+ *
+ *
+ */
+int print_num(va_list list)
+{
+	int num = va_arg(list, int);
+	char negative_sign = '-';
+	unsigned int n;
+	int count = 0;
+	int x = 1;
+
+	if (num < 0)
+	{
+		n = num * (-1);
+		write(1, & negative_sign, 1);
+	}
+	else
+	{
+		n = num;
+	}
+	while ((n/x) != 0)
+	{
+		count++;
+		x *= 10;
+	}
+	print_recursive(n);
+	return (count);
+}

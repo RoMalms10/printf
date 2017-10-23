@@ -15,17 +15,12 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%')
-			{
-				count += _putchar('%');
-				i++;
-			}
+			f = get_func(format[i + 1]);
+			if (f == NULL)
+				count += print_non(format[i], format[i + 1]);
 			else
-			{
-				f = get_func(format[i + 1]);
 				count += f(list);
-				i++;
-			}
+			i++;
 		}
 		else
 		{

@@ -28,5 +28,9 @@ int main(void)
 	printf("%d\n", x);
 	x = printf("Give me one percent %%\n");
 	printf("%d\n", x);
+	x = _printf("Print a char: %c %r\n", 'H');
+	printf("%d\n", x);
+	x = printf("Print a char: %c %r\n", 'H');
+	printf("%d\n", x);
 	return (0);
 }

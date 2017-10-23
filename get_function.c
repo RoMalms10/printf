@@ -3,21 +3,21 @@
 #include <unistd.h>
 #include "holberton.h"
 
-void (*get_func(char *s))(va_list)
+int (*get_func(char ch))(va_list)
 {
-	ops_f print_op = {
-		{"%s", print_string},
-		{"%c", print_char},
-		{"%%", print_percent},
-		{NULL, NULL}
+	ops_f print_op[] = {
+		{'c', print_char},
+		{'s', print_string},
+		{'\0', NULL}
 	};
 	int index;
 
 	index = 0;
-	while (print_op[index].operation != NULL)
+	while (print_op[index].operation != '\0')
 	{
-		if(_strcmp(s, print_op[index].operation) == 0)
-			return (print_op[index].func)
+		if(ch == print_op[index].operation)
+			return (print_op[index].func);
+		index++;
 	}
 	return (NULL);
 }

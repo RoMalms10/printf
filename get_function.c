@@ -8,6 +8,8 @@ int (*get_func(char ch))(va_list)
 	ops_f print_op[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'d', print_num},
+		{'i', print_num},
 		{'\0', NULL}
 	};
 	int index;

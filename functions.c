@@ -51,3 +51,22 @@ int print_string(va_list list)
 	}
 	return (i);
 }
+
+/**
+  *
+  *
+  */
+int print_non(char ch1, char ch2)
+{
+	if (ch2 == '%')
+	{
+		write(1, &ch2, 1);
+		return (1);
+	}
+	else
+	{
+		write(1, &ch1, 1);
+		write(1, &ch2, 1);
+		return (2);
+	}
+}

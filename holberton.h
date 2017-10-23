@@ -13,4 +13,5 @@ int _putchar(char c);
 int (*get_func(char ch))(va_list);
 int print_char(va_list list);
 int print_string(va_list list);
+int print_non(char ch1, char ch2);
 #endif

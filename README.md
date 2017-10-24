@@ -16,10 +16,10 @@ The repository contains the following files:
 
 ### Example of Use
 `int main(void)
-{
+\{
 	_printf("Print a %s\n", "string");
 	return (0);
-}
+\}
 ============================================
 (hbtn)$ ./print
 Print a string

@@ -20,5 +20,4 @@ int print_char(va_list list);
 int print_string(va_list list);
 int print_non(char ch1, char ch2);
 int print_num(va_list list);
-void print_recursive(unsigned int num);
 #endif

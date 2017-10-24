@@ -3,6 +3,12 @@
 #include <unistd.h>
 #include "holberton.h"
 
+/**
+  * _printf - takes in a string and prints different typed arguments for
+  * an unspecified amount of arguments
+  * @format: the initial string telling us what is going to be printed
+  * Return: the amount of times we write to stdout
+  */
 int _printf(const char *format, ...)
 {
 	int i, count;

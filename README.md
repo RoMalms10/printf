@@ -8,8 +8,8 @@ Our Printf project has been tested on `Ubuntu 14.04 LTS` via Vagrant in VirtualB
 ### Repository Contents
 The repository contains the following files:
 
-|   **File**    |   **Description**   |
-| ------------- | ------------------- |
+|   **File**   |   **Description**   |
+| -------------- | --------------------- |
 | new\_printf.c | Our take on the printf function |
 | holberton.h   | Contains file declarations |
 | get\_function.c | Chooses which function to use based on a specific format modifier |
@@ -17,24 +17,35 @@ The repository contains the following files:
 
 ### Description of Functions
 
-|  **Function** | **Description** |
-| ------------- | --------------- |
-| int \_printf(const char \*format, ...); | Desc |
-| int \_putchar(char c); | Desc |
-| int (\*get\_func(char c))(va\_list list); | Desc |
-| int print\_char(va\_list list); | Desc |
-| int print\_string(va\_list list); | Desc |
-| int print\_non(char ch1, char ch2); | Desc |
-| int print\_num(va\_list list); | Desc |
+| **Function** | **Description** |
+| -------------- | ----------------- |
+|int \_printf(const char \*format, ...);|This function returns the number of characters printed, excluding the null byte used to end output to strings. If an output error is encountered, a negative value is returned.|
+|int \_putchar(char c);| Writes a character to `stdout`. Returns `1` because a character was printed.|
+|int (\*get\_func(char c))(va\_list list);| Matches the character provided to the appropriate function. Returns `NULL` if nothing matches.|
+|int print\_char(va\_list list);| Writes a character to `stdout` by retrieving  the next argument in `va_list`. Returns `1` because one character was printed. |
+|int print\_string(va\_list list);| Writes one character at a time to `stdout`. Prints `(null)` if string is `NULL`. Returns the number of times it prints a character. |
+|int print\_non(char ch1, char ch2);| Writes non supported format modifiers to `stdout`. Returns `1` if the character after the format modifier is a  `%`, or returns `2` for anything else.
+|int print\_num(va\_list list);| Prints a number to `stdout`. Returns the amount of individual numbers and sign printed. |
 
-### Example of Use
+### How to install
+Start by cloning the repository to a directory, then run the exectuable.
+```
+(hbtn)$ git clone https://github.com/RoMalms10/printf.git
+```
+### Compilation
+
+This code was compiled with the following flags:
+` (hbtn)$ gcc -Wall -Werror -Wextra -pedantic *.c -o print `
+
+###### Example code
+
 ```
 int main(void)
 {
 	_printf("Print a %s\n", "string");
 	return (0);
 }
-============================================
+=========================================
 (hbtn)$ ./print
 Print a string
 (hbtn)$

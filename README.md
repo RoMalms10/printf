@@ -7,6 +7,7 @@ Our Printf project has been tested on `Ubuntu 14.04 LTS` via Vagrant in VirtualB
 
 ### Repository Contents
 The repository contains the following files:
+
 |   **File**    |   **Description**   |
 | ------------- | ------------------- |
 | new\_printf.c | Our take on the printf function |

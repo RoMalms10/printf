@@ -14,6 +14,15 @@ The repository contains the following files:
 | get\_function.c | Chooses which function to use based on a specific format modifier |
 | functions.c  | Contains the functions that handle how to print different types |
 
+### Description of Functions
+int \_printf(const char \*format, ...);
+int \_putchar(char c);
+int (\*get\_func(char c))(va\_list list);
+int print\_char(va\_list list);
+int print\_string(va\_list list);
+int print\_non(char ch1, char ch2);
+int print\_num(va\_list list);
+
 ### Example of Use
 ```
 int main(void)

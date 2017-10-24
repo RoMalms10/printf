@@ -7,8 +7,8 @@ Our Printf project has been tested on `Ubuntu 14.04 LTS` via Vagrant in VirtualB
 
 ### Repository Contents
 The repository contains the following files:
-|   **File**   |   **Description**   |
-|--------------|---------------------|
+|   **File**    |   **Description**   |
+| ------------- | ------------------- |
 | new\_printf.c | Our take on the printf function |
 | holberton.h   | Contains file declarations |
 | get\_function.c | Chooses which function to use based on a specific format modifier |

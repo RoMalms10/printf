@@ -26,10 +26,10 @@ Print a string
 (hbtn)$
 `
 
-###Notes
+### Notes
 Other format modifiers are curretly in develoopment.
 
-###To do list
+### To do list
 Increase the amount of commands that are accepted by our rendition of printf:
 1. Format modifiers:
 * %r

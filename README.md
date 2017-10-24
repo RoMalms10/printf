@@ -15,16 +15,17 @@ The repository contains the following files:
 | functions.c  | Contains the functions that handle how to print different types |
 
 ### Example of Use
-`int main(void)
-\{
+```
+int main(void)
+{
 	_printf("Print a %s\n", "string");
 	return (0);
-\}
+}
 ============================================
 (hbtn)$ ./print
 Print a string
 (hbtn)$
-`
+```
 
 ### Notes
 Other format modifiers are curretly in develoopment.
@@ -32,20 +33,20 @@ Other format modifiers are curretly in develoopment.
 ### To do list
 Increase the amount of commands that are accepted by our rendition of printf:
 1. Format modifiers:
-* %r
-* %R
-* %x
-* %X
-* %u
-* %o
-* %S
-* %p
+* r
+* R
+* x
+* X
+* u
+* o
+* S
+* p
 2. Flag characters:
-* +
+* \+
 * space
-* #
+* \#
 * 0
-* -
+* \-
 3. Length Modifiers:
 * l
 * h

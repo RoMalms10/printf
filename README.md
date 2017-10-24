@@ -14,4 +14,4 @@ functions.c: Contains the functions that will be fetched by get\_function.c
 * [**Robert Malmstein**](https://github.com/RoMalms10)
 * [**Kevan Lucchini**](https://github.com/kevanlucc)
 
-![Holberton](https://imgur.com/7xBugdJ)
+![Holberton](https://imgur.com/7xBugdJ "Holberton Logo")

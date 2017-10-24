@@ -80,7 +80,6 @@ int print_non(char ch1, char ch2)
 int print_num(va_list list)
 {
 	int num = va_arg(list, int);
-	char negative_sign = '-';
 	unsigned int n;
 	int count = 0;
 	int x = 1;
@@ -88,18 +87,20 @@ int print_num(va_list list)
 	if (num < 0)
 	{
 		n = num * (-1);
-		write(1, &negative_sign, 1);
+		_putchar('-');
 		count++;
 	}
 	else
 	{
 		n = num;
 	}
-	while ((n / x) != 0)
-	{
-		count++;
+	while ((n / x) > 9)
 		x *= 10;
+	while (x >= 1)
+	{
+		_putchar(((n / x) % 10) + '0');
+		x /= 10;
+		count++;
 	}
-	print_recursive(n);
 	return (count);
 }

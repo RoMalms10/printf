@@ -1,6 +1,11 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-
+/**
+  * struct ops - a structure containing a char to compare with format modifiers
+  * and then choose the right function when it matches
+  * @operation: the char we want to compare to
+  * @func: the address of the function we want to return if a char matches
+  */
 typedef struct ops
 {
 	char operation;

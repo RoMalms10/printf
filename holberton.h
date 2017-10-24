@@ -1,5 +1,9 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+
 /**
   * struct ops - a structure containing a char to compare with format modifiers
   * and then choose the right function when it matches
@@ -12,7 +16,6 @@ typedef struct ops
 	int (*func)(va_list);
 } ops_f;
 
-/*functions go here*/
 int _printf(const char *format, ...);
 int _putchar(char c);
 int (*get_func(char ch))(va_list);
@@ -20,4 +23,5 @@ int print_char(va_list list);
 int print_string(va_list list);
 int print_non(char ch1, char ch2);
 int print_num(va_list list);
+
 #endif

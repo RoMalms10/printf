@@ -16,13 +16,16 @@ The repository contains the following files:
 | functions.c  | Contains the functions that handle how to print different types |
 
 ### Description of Functions
-int \_printf(const char \*format, ...);
-int \_putchar(char c);
-int (\*get\_func(char c))(va\_list list);
-int print\_char(va\_list list);
-int print\_string(va\_list list);
-int print\_non(char ch1, char ch2);
-int print\_num(va\_list list);
+
+|  **Function** | **Description** |
+| ------------- | --------------- |
+| int \_printf(const char \*format, ...); | Desc |
+| int \_putchar(char c); | Desc |
+| int (\*get\_func(char c))(va\_list list); | Desc |
+| int print\_char(va\_list list); | Desc |
+| int print\_string(va\_list list); | Desc |
+| int print\_non(char ch1, char ch2); | Desc |
+| int print\_num(va\_list list); | Desc |
 
 ### Example of Use
 ```

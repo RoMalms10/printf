@@ -1,14 +1,57 @@
-# Printf
+## Printf Project
+### Synopsis
+The objective of the Printf project is to learn the base functionality of printf and take those concepts and apply them ourselves to create a new printf that works in the same way.
 
-**new\_printf.c:** Our take on the printf function
+### Environment
+Our Printf project has been tested on `Ubuntu 14.04 LTS` via Vagrant in VirtualBox.
 
-**holberton.h:** Contains file declarations
+### Repository Contents
+The repository contains the following files:
+|   **File**   |   **Description**   |
+|--------------|---------------------|
+| new\_printf.c | Our take on the printf function |
+| holberton.h   | Contains file declarations |
+| get\_function.c | Chooses which function to use based on a specific format modifier |
+| functions.c  | Contains the functions that handle how to print different types |
 
-**get\_function.c:** Contains instructions to choose which function to use based on a given character
+### Example of Use
+`int main(void)
+{
+	_printf("Print a %s\n", "string");
+	return (0);
+}
+============================================
+(hbtn)$ ./print
+Print a string
+(hbtn)$
+`
 
-**functions.c:** Contains the functions that will be fetched by get\_function.c
+###Notes
+Other format modifiers are curretly in develoopment.
 
-## Authors
+###To do list
+Increase the amount of commands that are accepted by our rendition of printf:
+1. Format modifiers:
+* %r
+* %R
+* %x
+* %X
+* %u
+* %o
+* %S
+* %p
+2. Flag characters:
+* +
+* space
+* #
+* 0
+* -
+3. Length Modifiers:
+* l
+* h
+* field width for non-custom conversion specifiers
+
+### Authors
 
 * [**Robert Malmstein**](https://github.com/RoMalms10)
 * [**Kevan Lucchini**](https://github.com/kevanlucc)

@@ -1,12 +1,8 @@
-#include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "holberton.h"
 
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
- *
  * Return: 1 because 1 char was printed
  */
 int _putchar(char c)
@@ -16,7 +12,7 @@ int _putchar(char c)
 }
 
 /**
-  * print_char - prints a char to standard out
+  * print_char - writes a char to standard out
   * @list: the va_list we want to increment through
   * Return: 1 because we printed only 1 char
   */
@@ -30,7 +26,7 @@ int print_char(va_list list)
 }
 
 /**
-  * print_string - prints a string 1 char at a time to stdout
+  * print_string - writes a string 1 char at a time to stdout
   * @list: the va_list we want to increment through
   * Return: the number of times we printed a char
   */
@@ -52,7 +48,7 @@ int print_string(va_list list)
 }
 
 /**
-  * print_non - prints chars after a % if they
+  * print_non - writes chars after a % if they
   * don't match anything in the struct
   * @ch1: the first char passed (always %)
   * @ch2: the char after the %
@@ -73,9 +69,9 @@ int print_non(char ch1, char ch2)
 	}
 }
 /**
- * print_num - takes a number and passes it to another function to write
+ * print_num - writes a number to stdout
  * @list: va_list we want to increment through
- * Return: the amount of numbers and signs we print
+ * Return: the amount of individual numbers and signs we printed
  */
 int print_num(va_list list)
 {

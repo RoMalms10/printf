@@ -1,43 +1,84 @@
-.TH man 3 “2017-10-23” “GNU” “_PRINTF”
+.TH _PRINTF 3 2017-10-23 GNU "Linux Programmer's Manual"
 .SH NAME
-    _printf - function that prints to stdout
+.LP
+_printf - formatted output conversion
 
 .SH SYNOPSIS
-    #include <stdio.h>
-    #include <stdarg.h>
-    #include <stdlib.h>
-    #include <unistd.h>
-    #include "holberton.h"
-
-    int _printf(const char *format, ...);
-    int _putchar(char c);
-    int (*get_func(char ch))(va_list);
-    int print_char(va_list list);
-    int print_string(va_list list);
-    int print_non(char ch1, char ch2);
-    int print_num(va_list list);
+.LP
+#include <holberton.h>
+.LP
+int _printf(const char *format, ...);
+.br
+int _putchar(char c);
+.br
+int (*get_func(char ch))(va_list);
+.br
+int print_char(va_list list);
+.br
+int print_string(va_list list);
+.br
+int print_non(char ch1, char ch2);
+.br
+int print_num(va_list list);
 
 .SH DESCRIPTION
-     The _printf() family of functions produces output according to a format as described
-     below.  The _printf() function writes output to stdout, the standard
-     output stream.
+.LP
+The _printf() function produces output according to a format as described below. The _printf() function writes output to stdout, the standard output stream.
 
-     These functions write the output under the control of a format string that specifies
-     how subsequent arguments (or arguments accessed via the variable-length argument
-     facilities of stdarg are converted for output.
+.LP
+This function writes the output under the control of a format string that specifies how subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg) are converted for output.
+
+.RS -3
 .B Return Value
-This function returns the number of characters printed, excluding the null byte used to end output to strings.
+.RE
+
+.LP
+Upon successful return, this function will return the number of characters written, excluding the null byte used to end output to strings.
+
+.LP
 If an output error is encountered, a negative value is returned.
+
+.RS -3
 .B Format of the format string
-The percent sign represents the format string (‘%’), and is followed by a format specifier.
-.B CONVERSION SPECIFIERS
-d, i - prints an integer
-c - prints a character
-s - prints a string
-% -  a ‘%’ is written, no argument is converted. The complete conversion specification is ‘%%’.
+.RE
+
+.LP
+The percent sign represents the format string (‘%’), and is followed by a format modifier.
+
+.RS -3
+.B Format Modifiers
+.RE
+
+.LP
+Supported format modifiers:
+.RS -3
+.B d, i
+.RE
+The int argument is converted to signed decimal notation. Writes an integer to stdout.
+.RS -3
+.B c
+.RE
+The character gets promoted to it's ASCII value and written to stdout.
+.RS -3
+.B s
+.RE
+The const char * argument is expected to be an array of character type (pointer to a string). Characters from the aray are written up to (but not including) a terminating null-byte ('\\0').
+.RS -3
+.B %
+.RE
+A '%' is written while no argument is converted. The complete conversion specification is '%%'.
+
+.LP
+Other format modifiers not supported by _printf will be printed out as they are. For example, if '%r' is passed to _printf, '%r' will be written to stdout. Length modifiers, field width and precision modifers are not supported in this version.
+
 .SH BUGS
+.LP
 No bugs as of yet.
+
 .SH SEE ALSO
-print(3)
+.LP
+printf(3)
+
 .SH AUTHORS
+.LP
 Robert Malmstein, Kevan Lucchini

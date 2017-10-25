@@ -1,9 +1,9 @@
 ## Printf Project
 ### Synopsis
-The objective of the Printf project is to learn the base functionality of printf and take those concepts and apply them ourselves to create a new printf that works in the same way.
+The objective of the printf project is to learn the base functionality of printf, take those concepts and apply them ourselves to create a new printf that works in the same way.
 
 ### Environment
-Our Printf project has been tested on `Ubuntu 14.04 LTS` via Vagrant in VirtualBox.
+Our printf project has been tested on `Ubuntu 14.04 LTS` via Vagrant in VirtualBox.
 
 ### Repository Contents
 The repository contains the following files:
@@ -28,14 +28,14 @@ The repository contains the following files:
 |int print\_num(va\_list list);| Prints a number to `stdout`. Returns the amount of individual numbers and sign printed. |
 
 ### How to install
-Start by cloning the repository to a directory, then run the exectuable.
+Start by cloning the repository to a directory, then run the executable.
 ```
 (hbtn)$ git clone https://github.com/RoMalms10/printf.git
 ```
 ### Compilation
 
 This code was compiled with the following flags:
-` (hbtn)$ gcc -Wall -Werror -Wextra -pedantic *.c -o print `
+` (hbtn)$ gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c -o print `
 
 ###### Example code
 
@@ -52,7 +52,7 @@ Print a string
 ```
 
 ### Notes
-Other format modifiers are curretly in develoopment.
+Other format modifiers are currently in development.
 
 ### To do list
 Increase the amount of commands that are accepted by our rendition of printf:
@@ -82,5 +82,5 @@ Increase the amount of commands that are accepted by our rendition of printf:
 * [**Kevan Lucchini**](https://github.com/kevanlucc)
 
 <p align="center">
-	<img src="https://intranet.hbtn.io/assets/holberton-logo-simplified-d4e8a1e8bf5ad93c8c3ce32895b4b53749b477b7ba7342d7f064e6883bcd3be2.png">
+<a href="https://www.holbertonschool.com"><img src="https://intranet.hbtn.io/assets/holberton-logo-simplified-d4e8a1e8bf5ad93c8c3ce32895b4b53749b477b7ba7342d7f064e6883bcd3be2.png"></a>
 </p>
